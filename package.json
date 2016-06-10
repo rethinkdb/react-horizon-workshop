@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "horizon": "^1.1.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "reactpack": "^0.4.4"
+  }
+}
