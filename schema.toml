@@ -1,0 +1,8 @@
+# This is a TOML document
+
+[groups.admin]
+[groups.admin.rules.carte_blanche]
+template = "any()"
+
+[groups.default.rules.cart_blanche]
+template = "any()"
