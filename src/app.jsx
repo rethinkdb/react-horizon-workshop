@@ -35,11 +35,23 @@ class App extends React.Component {
   }
   
   handleLogin(username) {
-    // Fill in this method
+    this.collection
+        .order("time", "descending")
+        .limit(20).watch()
+        .forEach(messages => {
+          this.setState({
+            username: username,
+            messages: [...messages].reverse()
+          });
+        });
   }
   
   handleMessage(message) {
-    // Fill in this method
+    this.collection.store({
+      user: this.state.username,
+      text: message,
+      time: new Date(),
+    });
   }
 }
 
